@@ -2,6 +2,8 @@
 
 Personal portfolio website for **Aahan Jain**, an AI Engineer and Software Engineer with an MS in Computer Science from George Mason University. The site showcases experience building production-ready AI systems, RAG applications, and scalable backend platforms.
 
+🌐 **Live Demo:** [https://my-portfolio-three-ochre-44.vercel.app](https://my-portfolio-three-ochre-44.vercel.app)
+
 ## About
 
 This portfolio highlights work across agentic AI, machine learning, and full-stack engineering — including RAG pipelines, multi-agent systems, ML forecasting platforms, and cloud-deployed backend services.
@@ -49,7 +51,3 @@ npm start
 - **Email:** aahanjain1114@gmail.com
 - **LinkedIn:** [linkedin.com/in/aahan-jain-30222020b](https://www.linkedin.com/in/aahan-jain-30222020b)
 - **GitHub:** [github.com/aahan14jain](https://github.com/aahan14jain)
-
-## License
-
-This project is for personal portfolio use.
