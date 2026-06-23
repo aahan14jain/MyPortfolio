@@ -23,13 +23,14 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 md:px-8">
           <div className="flex flex-col md:flex-row items-center md:items-start gap-10 md:gap-16">
             <div className="flex-1 w-full">
+              <p className="inline-flex items-center mb-4 md:mb-5 px-3 sm:px-3.5 py-1.5 rounded-full text-xs sm:text-sm text-gray-600 border border-gray-300 font-medium bg-gray-50">
+                📍 Seattle, WA • Open to Full-Time SWE / AI Engineer Roles
+              </p>
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight tracking-tight mb-5 md:mb-6">AI Engineer & Software Engineer</h1>
               <div className="mb-8 md:mb-10 max-w-xl space-y-3">
                 <p className="text-base sm:text-lg md:text-xl text-gray-500 leading-relaxed">Building Agentic AI systems, RAG applications, and scalable backend platforms.</p>
                 <p className="text-base sm:text-lg md:text-xl text-gray-500 leading-relaxed">
                   MS Computer Science – George Mason University
-                  <br />
-                  Open to Software Engineer, AI Engineer, and Machine Learning Engineer opportunities. 📍 Seattle, WA | Available for Full-Time Roles
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
