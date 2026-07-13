@@ -1,3 +1,151 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #060d14;
+  color: #e6f2fb;
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display), system-ui, sans-serif;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.55); }
+  70% { box-shadow: 0 0 0 10px rgba(56, 189, 248, 0); }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.marquee-track {
+  animation: marquee 32s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.live-dot {
+  animation: pulse-dot 2s ease-out infinite;
+}
+
+.rise {
+  animation: rise 0.7s ease-out both;
+}
+
+.rise-delay {
+  animation: rise 0.7s ease-out 0.15s both;
+}
+
+.mesh-grid {
+  background-image:
+    linear-gradient(rgba(56, 189, 248, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.07) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at center, black 20%, transparent 75%);
+}
+
+.spotlight {
+  background: radial-gradient(
+    600px circle at var(--mx, 50%) var(--my, 30%),
+    rgba(56, 189, 248, 0.14),
+    transparent 40%
+  );
+}
+
+.project-panel {
+  transition: border-color 0.25s ease, background-color 0.25s ease, transform 0.25s ease;
+}
+
+.project-panel:hover {
+  border-color: rgba(56, 189, 248, 0.45);
+  background-color: rgba(56, 189, 248, 0.06);
+  transform: translateY(-2px);
+}
+
+.project-panel:hover .proj-index {
+  color: #38bdf8;
+}
+
+.skill-chip {
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.skill-chip:hover {
+  transform: translateY(-3px) scale(1.03);
+  border-color: rgba(56, 189, 248, 0.5);
+  background-color: rgba(56, 189, 248, 0.12);
+}
+
+.mono-icon {
+  filter: invert(1) brightness(1.15);
+  opacity: 0.9;
+}
+
+.scroll-x {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(56, 189, 248, 0.4) transparent;
+}
+
+.frame-tilt {
+  transform: rotate(2deg);
+  transition: transform 0.4s ease;
+}
+
+.frame-tilt:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+/* ── AI Decision Intelligence card (product brand tokens) ── */
+.font-fraunces {
+  font-family: var(--font-fraunces), Georgia, 'Times New Roman', serif;
+}
+
+.decision-card {
+  --teal: #0f766e;
+  --amber: #fbbf24;
+  --amber-deep: #d97706;
+  --paper: #f6f0e6;
+  --deep-teal: #0b3d38;
+  --deep-teal-mid: #0f534c;
+  background: linear-gradient(165deg, var(--deep-teal) 0%, var(--deep-teal-mid) 55%, #0a2f2b 100%);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.decision-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(251, 191, 36, 0.55) !important;
+  box-shadow:
+    0 0 0 1px rgba(251, 191, 36, 0.25),
+    0 18px 40px -14px rgba(217, 119, 6, 0.35),
+    0 36px 64px -24px rgba(15, 118, 110, 0.35);
+}
+
+.decision-card-grain {
+  opacity: 0.07;
+  mix-blend-mode: soft-light;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.decision-badge:hover {
+  border-color: rgba(251, 191, 36, 0.55);
+  background-color: rgba(251, 191, 36, 0.16);
+  box-shadow: 0 0 18px -4px rgba(251, 191, 36, 0.55);
+}
