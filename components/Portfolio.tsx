@@ -62,6 +62,25 @@ const projects = [
       ],
     },
   },
+  {
+    title: 'RouteShift — Real-Time Transit Delay Analytics',
+    blurb:
+      'RouteShift turns public GTFS-RT GPS and static schedules into route delay metrics. A Kafka producer feeds vehicle positions into Spark Structured Streaming, which archives raw events and writes five-minute delay windows as partitioned Parquet. Airflow handles static refresh and backfill; curated Parquet lands in Glue/Redshift, with AWS infra via Terraform.',
+    stack: ['Kafka', 'Spark', 'Airflow', 'S3', 'Parquet', 'Glue', 'Redshift', 'Terraform', 'Docker'],
+    href: 'https://github.com/aahan14jain/tranist-pulse-data-platform',
+    metric: '~92% matched',
+    accent: '#FB7185',
+    preview: {
+      label: 'Delay Pipeline',
+      title: 'RouteShift · GTFS eval',
+      highlight: '~92%',
+      bars: [
+        { label: 'Schedule match rate', value: '~92%', width: '92%' },
+        { label: 'GPS events joined', value: '8.8K', width: '78%' },
+        { label: 'Routes covered', value: '86', width: '58%' },
+      ],
+    },
+  },
 ] as const
 
 export default function Portfolio() {
